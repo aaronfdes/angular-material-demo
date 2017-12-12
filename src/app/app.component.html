@@ -1,0 +1,60 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>Material App</span>
+      <span class="fill-remaining-space"></span>
+      <span (click)="sidenav.toggle()">
+        <i class="material-icons">code</i>
+      </span>
+    </mat-toolbar>
+
+    <mat-grid-list cols="3" rowHeight="16:10" gutterSize="5px">
+      <mat-grid-tile>
+        <mat-grid-tile-header>Header 1</mat-grid-tile-header>
+        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>Header 2</mat-grid-tile-header>
+        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>Header 3</mat-grid-tile-header>
+        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>Header 4</mat-grid-tile-header>
+        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>Header 5</mat-grid-tile-header>
+        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-grid-tile-header>Header 6</mat-grid-tile-header>
+        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Enter your name">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="openDialog()">Click me!</button>
+    </div>
+
+  </mat-sidenav-content>
+
+
+  <mat-sidenav #sidenav position="end" mode="side" opened="false">
+    <mat-list>
+      <mat-list-item>
+        <mat-icon matListIcon>photo_library</mat-icon>
+        <h3 matLine>Gallery</h3>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>contacts</mat-icon>
+        <h3 matLine>Contact</h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+</mat-sidenav-container>
