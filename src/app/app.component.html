@@ -9,29 +9,9 @@
     </mat-toolbar>
 
     <mat-grid-list cols="3" rowHeight="16:10" gutterSize="5px">
-      <mat-grid-tile>
+      <mat-grid-tile *ngFor="let image of albums; let i=index">
         <mat-grid-tile-header>Header 1</mat-grid-tile-header>
-        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header>Header 2</mat-grid-tile-header>
-        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header>Header 3</mat-grid-tile-header>
-        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header>Header 4</mat-grid-tile-header>
-        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header>Header 5</mat-grid-tile-header>
-        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-grid-tile-header>Header 6</mat-grid-tile-header>
-        <img src="http://www.w3schools.com/w3css/img_fjords.jpg" />
+        <img [src]="image.thumb" (click)="open(i)" />
       </mat-grid-tile>
     </mat-grid-list>
 

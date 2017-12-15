@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { LightboxModule } from 'angular2-lightbox';
+
 import { MyOwnCustomMaterialModule } from './myownmaterial.module';
 import { DialogOverviewExampleDialog } from './app.component';
 import { AppComponent } from './app.component';
@@ -15,8 +17,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MyOwnCustomMaterialModule
-  ],  
+    MyOwnCustomMaterialModule,
+    LightboxModule
+  ],
   entryComponents: [
     DialogOverviewExampleDialog
     ],
